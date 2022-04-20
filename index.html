@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lange="pt-br">
+    
+    <head>
+        <meta charset="UTF-8">  
+        <title>Criptografe</title>
+        <!--CSS-->
+        <link rel="stylesheet" href="style.css">
+        <!--Icon da aba-->
+        <link rel="icon" href="lock.png">
+
+    </head>
+
+    <body>
+        <!--abas laterais-->
+        <aside class="aside">
+            <a href="https://www.linkedin.com/in/luisa-cotinho-de-melo-141347213/" id="LinkedIn">LinkedIn</a>
+            <a href="https://github.com/Melo-Luisa" id="GitHub">GitHub</a>
+        </aside>
+        <!--titulo-->
+        <div class="cabeça">
+            <header>
+            <h1>Criptografe o seu texto:</h1>
+            </header>
+        </div>
+
+        <!--principal-->
+        <div class="main">
+            <!--aqui irá fazer a caixa e ter um texto em cima que sairá ao clicar-->
+            <input class="input" type="text" name="texto" id="texto" placeholder="digite aqui...">
+            <input class="botao" type="submit" value="Criptografar" id="buttonCripto">
+            <input class="botao" type="submit" value="Descriptografar" id="buttonDescripto">
+        </div>
+
+        <!--texto-->
+        <div class="text">
+            <h2 id="">Saída</h2>
+            <input class="input" type="text" name="saida" id="saida" placeholder="Mensagem criptografada!">
+            <input class="botao" type="submit" value="Copiar" id="buttonCopy">
+        </div>
+        <!--rodapé-->
+        <div class="small">
+            <img src="information.png" class="small">
+            <p>Apenas letras minúsculas e sem acentos.</p>
+        </div> 
+        <div class="ass">
+            <p>By Luisa Melo</p>
+        </div>
+     </body>    
+    
+<!--JS-->
+   
+    <script>
+        //Caixa cripto
+        var inputEntrada = document.querySelector('#texto');
+        //Caixa copia
+        var inputSaida = document.querySelector('#saida');
+        //botão cripto
+        var buttonCrip = document.querySelector('#buttonCripto');
+        //botão Descripto
+        var buttonDescrip = document.querySelector('#buttonDescripto');
+        //botão copy
+        var buttonCopy = document.querySelector('#buttonCopy');
+        function criptografar(){
+            var text = inputEntrada.value;
+            var result = text.replace(/e/g, 'enter');
+            var result2 = result.replace(/i/g, 'imes');
+            var result3 = result2.replace(/a/g, 'ai');
+            var result4 = result3.replace(/u/g, 'ufat');
+            var result5 = result4.replace(/o/g, 'ober');
+
+            inputSaida.value = result5;
+            
+        }
+        function descriptografar(){
+            var text = inputEntrada.value;
+            var result = text.replace(/enter/g, 'e');
+            var result2 = result.replace(/imes/g, 'i');
+            var result3 = result2.replace(/ai/g, 'a');
+            var result4 = result3.replace(/ufat/g, 'u');
+            var result5 = result4.replace(/ober/g, 'o');
+
+            inputSaida.value = result5;
+            
+            /*aqui o contrário do de cima*/
+        } 
+
+        function copia(){
+            var copy = inputEntrada.value;
+            navigator.clipboard.writeText(copy);
+        }
+
+        //faz a função no clique
+        buttonCrip.onclick = criptografar;
+        buttonDescrip.onclick = descriptografar;
+        buttonCopy.onclick = copia;
+    
+    </script>
+</html>

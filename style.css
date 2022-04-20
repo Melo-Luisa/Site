@@ -1,0 +1,64 @@
+body{
+    background: #a4ce41;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+.aside a{
+    position: absolute;
+    left: -90px;
+    transition: 0.5s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    border-radius: 0 15px 15px 0;
+}
+.aside a:hover{
+    left: 0;
+}
+#LinkedIn{
+    
+    top: 20px;
+    background-color: rgb(97, 180, 89);
+
+}
+#GitHub{
+    top: 100px;
+    background-color: rgb(59, 90, 59);
+    
+}
+.cabeça{
+    font-family:45px ;
+    color: #eeeeee;
+    padding: 15px;
+}
+.main{
+    padding: 40px;
+} 
+.input{
+    padding: 15px;
+    font-size: 20px;
+    background-color: #e7ebde;
+    /*arrendou as bordar*/
+    border: none;
+    border-radius: 60px;
+    text-align: center;
+}
+.text{
+    color: #eeeeee;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.botao{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #4d6d03;
+    border: none;
+   
+}
+.small{
+    text-align: left;
+    padding-left: 40px;
+    color: #4d6d03;
+    width: 15%;
+}
